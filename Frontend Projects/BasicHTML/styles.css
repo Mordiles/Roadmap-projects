@@ -1,0 +1,8 @@
+.name{
+  display: flex;
+  gap: 10px;
+}
+.sendButton{
+  margin-top: 10px;
+  display: block;
+}
