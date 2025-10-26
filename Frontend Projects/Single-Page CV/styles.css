@@ -1,0 +1,27 @@
+body{
+    padding: 50px;
+    border: 2px solid black;
+    font-weight: normal;
+
+}
+h1 {
+    font-family: serif;
+    font-weight: lighter;
+}
+h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: green;
+}
+h3{
+    font-weight: normal;
+    font-size: 18px;
+    color: blue;
+}
+a:hover{
+    color: red;
+}
+a:active{
+    color: red;
+}
