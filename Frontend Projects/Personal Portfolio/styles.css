@@ -44,6 +44,10 @@ header{
 
 /* Introduction End */
 
+/* Portfolio tab */
+  .portfolio{
+    display: flex;
+  }
 /* Project */
   .projects{
     display: flex;
@@ -52,12 +56,46 @@ header{
     border: 1px solid black;
     width: 250px;
   }
-
+  
   .projects ul{
     list-style: none;
     padding: 0;
   }
-/* Project End */
+  /* Project End */
+
+/* Work experience / opensource work */
+
+.works{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px;
+}
+/* Work experience / opensource work End*/
+
+/* Education section */
+.education{
+  padding: 15px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.education ul{
+  padding-left: 15px;
+  list-style: none;
+}
+
+
+
+.education ul li::before{
+  content: "- ";
+}
+/* Education section End */
+
+/* Portfolio tab */
 
 /* Contact Page */
 .sendButton{
