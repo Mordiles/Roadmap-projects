@@ -1,22 +1,25 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO META -->
-   <meta name="author" content="Mordiles">
-   <meta name="keywords" content="article, HTML, roadmap.sh">
-   <meta name="description" content="Articles">
-  <title>Article</title>
-</head>
-<body>
-  <header>
-      <div class="name">
+    <!-- SEO META -->
+    <meta name="author" content="Mordiles" />
+    <meta name="keywords" content="article, HTML, roadmap.sh" />
+    <meta name="description" content="Articles" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Article</title>
+  </head>
+  <body>
+    <header
+      class="mx-auto flex items-center justify-between shadow-md ps-6 pe-6 py-1"
+    >
+      <div class="flex items-center gap-3">
         <img src="../assets/favicon.ico" alt="logo" />
-        <p>Mordiles</p>
+        <p class="">Mordiles</p>
       </div>
-      <nav>
-        <ul>
+      <nav class="flex gap-6 text-blue-400 font-medium">
+        <ul class="flex m-5 gap-6">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="article.html">Articles</a></li>
@@ -24,25 +27,38 @@
         </ul>
       </nav>
     </header>
-  <main>
-    <h1>Article</h1>
-    <section class="semanticHTML">
-      <article>
-        <h2>Why Semantic HTML Matters</h2>
-        <p>Semantic HTML helps give meaning to web content. Tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;article&gt;</code> tell browsers and assistive technologies what each part of the page represents. This improves accessibility and SEO, making your site more understandable for both users and search engines.</p>
-          <blockquote>
-            Written by Sarah Lee — Front-End Developer
-          </blockquote>
-      </article>
+    <main>
+      <h1 class="text-4xl text-center my-15 font-bold font-serif">Article</h1>
+      <section class="w-2/4 flex flex-col mx-auto">
+        <article>
+          <h2 class="text-3xl text-gray-800 font-bold py-2">
+            Why Semantic HTML Matters
+          </h2>
+          <p class="">
+            Semantic HTML helps give meaning to web content. Tags like
+            <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and
+            <code>&lt;article&gt;</code> tell browsers and assistive
+            technologies what each part of the page represents. This improves
+            accessibility and SEO, making your site more understandable for both
+            users and search engines.
+          </p>
+          <blockquote class="italic pt-2">Written by Sarah Lee — Front-End Developer</blockquote>
+        </article>
 
-      <article>
-        <h2>Common Semantic Elements You Should Know</h2>
-        <p>Some of the most useful semantic elements include <code>&lt;main&gt;</code> for primary content, <code>&lt;section&gt;</code> for grouped topics, and <code>&lt;aside&gt;</code> for side content. These elements make your HTML more organized and easier to navigate.</p>
-          <blockquote>
-            Written by Daniel Park — UI Designer
-          </blockquote>
-      </article>
-    </section>
-  </main>
-</body>
+        <article>
+          <h2 class="text-3xl text-gray-800 font-bold py-2">
+            Common Semantic Elements You Should Know
+          </h2>
+          <p>
+            Some of the most useful semantic elements include
+            <code>&lt;main&gt;</code> for primary content,
+            <code>&lt;section&gt;</code> for grouped topics, and
+            <code>&lt;aside&gt;</code> for side content. These elements make
+            your HTML more organized and easier to navigate.
+          </p>
+          <blockquote class="italic pt-2">Written by Daniel Park — UI Designer</blockquote>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
