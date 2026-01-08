@@ -7,34 +7,51 @@
     <meta name="author" content="Mordiles" />
     <meta name="keywords" content="contact, Mordiles, roadmap.sh" />
     <title>Mordiles Contact</title>
-    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/output.css" />
   </head>
   <body>
-    <header>
-      <div class="name">
+    <header
+      class="mx-auto flex items-center justify-between shadow-md ps-6 pe-6 py-1"
+    >
+      <div class="flex items-center gap-3">
         <img src="../assets/favicon.ico" alt="logo" />
-        <p>Mordiles</p>
+        <p class="">Mordiles</p>
       </div>
-      <nav>
-        <ul>
+      <nav class="flex gap-6 text-blue-400 font-medium">
+        <ul class="flex m-5 gap-6">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="article.html">Articles</a></li>
           <li><a href="contactpage.html">Contact</a></li>
         </ul>
       </nav>
-      <h1>Contact</h1>
     </header>
     <main>
-      <form action="">
-        <p>Name:</p>
-        <input type="text" />
-        <p>Email:</p>
-        <input type="email" name="" id="" />
-        <p>Message:</p>
-        <input type="text" />
-        <input type="submit" value="Send" name="send" class="sendButton"/>
+      <h1 class="text-4xl font-bold text-center py-15 font-serif">
+        Contact Page
+      </h1>
+      <form
+        action=""
+        class="mx-auto w-1/3 mt-10 p-5 space-y-5 rounded-3xl text-gray-800 mb-15 shadow-sm shadow-gray-800 inset-shadow-sm inset-shadow-gray-800"
+      >
+        <p class="font-bold text-2xl font-serif">Name:</p>
+        <input class="border w-full p-1" type="text" />
+        <p class="font-bold text-2xl font-serif">Email:</p>
+        <input class="border w-full p-1" type="email" name="" id="" />
+        <p class="font-bold text-2xl font-serif">Message:</p>
+        <input class="border w-full p-1" type="text" />
+        <div class="flex justify-end">
+          <input
+            type="submit"
+            value="Send"
+            name="send"
+            class="border py-1 px-3 hover:cursor-pointer ml-auto bg-blue-500 text-white text-2xl font-bold"
+          />
+        </div>
       </form>
     </main>
+    <footer class="text-center shadow-inner text-2xl p-5 font-mono">
+      <h3>© all rights reserved 2025</h3>
+    </footer>
   </body>
 </html>
