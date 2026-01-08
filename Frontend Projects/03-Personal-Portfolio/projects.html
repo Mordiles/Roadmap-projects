@@ -6,16 +6,19 @@
     <meta name="description" content="Mordiles Projects" />
     <meta name="keywords" content="projects, HTML, roadmap.sh" />
     <meta name="author" content="Mordiles" />
+    <link rel="stylesheet" href="src/output.css" />
     <title>Mordiles Projects</title>
   </head>
   <body>
-    <header>
-      <div class="name">
+    <header
+      class="mx-auto flex items-center justify-between shadow-md ps-6 pe-6 py-1"
+    >
+      <div class="flex items-center gap-3">
         <img src="../assets/favicon.ico" alt="logo" />
-        <p>Mordiles</p>
+        <p class="">Mordiles</p>
       </div>
-      <nav>
-        <ul>
+      <nav class="flex gap-6 text-blue-400 font-medium">
+        <ul class="flex m-5 gap-6">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="article.html">Articles</a></li>
@@ -26,19 +29,41 @@
 
     <main>
       <section class="title">
-        <h1>Mordiles Projects</h1>
+        <h1 class="text-4xl text-center my-15 font-bold font-serif">
+          Mordiles Projects
+        </h1>
       </section>
 
-      <section class="projects">
-        <ul>
-          <li>HTML Only Portfolio</li>
-          <li>Calculator</li>
-          <li>Quiz App</li>
-          <li>Countdown Timer</li>
-          <li>Product Upcoming Page</li>
+      <section class="mx-auto w-2/4">
+        <ul class="space-y-5 mb-5">
+          <li>
+            <span class="text-3xl text-gray-800 font-bold">HTML Only Portfolio</span>
+            <p>A simple portfolio using HTML Only</p>
+          </li>
+          <li>
+            <span class="text-3xl text-gray-800 font-bold">Calculator</span>
+            <p>A simple calculator app </p>
+          </li>
+          <li>
+            <span class="text-3xl text-gray-800 font-bold">Quiz App</span>
+            <p>A simple quiz app</p>
+          </li>
+          <li>
+            <span class="text-3xl font-bold text-gray-800">Countdown Timer</span>
+            <p>Simple countdown timer</p>
+          </li>
+          <li>
+            <span class="text-3xl font-bold text-gray-800">Product Upcoming Page</span>
+            <p>Simple product upcoming page</p>
+          </li>
         </ul>
-        <p><a href="https://github.com/Mordiles">Visit My Github To See More!</a></p>
+        <p class="my-5 text-center text-blue-500 font-medium underline">
+          <a href="https://github.com/Mordiles">Visit My Github To See More!</a>
+        </p>
       </section>
     </main>
+    <footer class="text-center shadow-inner text-2xl p-5 font-mono">
+      <h3>© all rights reserved 2025</h3>
+    </footer>
   </body>
 </html>
