@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A simple HTML only website" />
@@ -12,6 +12,13 @@
     <meta name="author" content="Mordiles" />
     <meta name="keywords" content="HTML, Frontend Project, roadmap.sh" />
     <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header
@@ -27,6 +34,15 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="article.html">Articles</a></li>
           <li><a href="contactpage.html">Contact</a></li>
+          <li>
+            <button>
+              <i
+                class="fa-regular fa-moon fa-lg"
+                style="color: #74c0fc"
+                id="modeToggle"
+              ></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -149,3 +165,4 @@
     </footer>
   </body>
 </html>
+<script src="darkMode.js"></script>
