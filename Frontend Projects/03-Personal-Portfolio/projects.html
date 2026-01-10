@@ -7,22 +7,45 @@
     <meta name="keywords" content="projects, HTML, roadmap.sh" />
     <meta name="author" content="Mordiles" />
     <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Mordiles Projects</title>
   </head>
-  <body>
+  <body class="dark:bg-slate-900 dark:text-white">
     <header
-      class="mx-auto flex items-center justify-between shadow-md ps-6 pe-6 py-1"
+      class="mx-auto flex items-center justify-between shadow-md ps-6 pe-6 py-1 dark:bg-slate-900 dark:shadow-gray-950"
     >
       <div class="flex items-center gap-3">
         <img src="../assets/favicon.ico" alt="logo" />
-        <p class="">Mordiles</p>
+        <p class="dark:text-white">Mordiles</p>
       </div>
-      <nav class="flex gap-6 text-blue-400 font-medium">
+      <nav class="flex gap-6 text-blue-400 dark:text-white font-medium">
         <ul class="flex m-5 gap-6">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="article.html">Articles</a></li>
-          <li><a href="contactpage.html">Contact</a></li>
+          <li class="hover:text-slate-900 dark:hover:text-blue-300">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="hover:text-slate-900 dark:hover:text-blue-300">
+            <a href="projects.html">Projects</a>
+          </li>
+          <li class="hover:text-slate-900 dark:hover:text-blue-300">
+            <a href="article.html">Articles</a>
+          </li>
+          <li class="hover:text-slate-900 dark:hover:text-blue-300">
+            <a href="contactpage.html">Contact</a>
+          </li>
+          <li>
+            <button>
+              <i
+                class="fa-regular fa-moon fa-lg text-blue-300 hover:text-slate-900 dark:hover:text-blue-300 dark:text-white"
+                id="modeToggle"
+              ></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -37,23 +60,29 @@
       <section class="mx-auto w-2/4">
         <ul class="space-y-5 mb-5">
           <li>
-            <span class="text-3xl text-gray-800 font-bold">HTML Only Portfolio</span>
+            <span class="text-3xl text-gray-800 font-bold dark:text-white"
+              >HTML Only Portfolio</span
+            >
             <p>A simple portfolio using HTML Only</p>
           </li>
           <li>
-            <span class="text-3xl text-gray-800 font-bold">Calculator</span>
-            <p>A simple calculator app </p>
+            <span class="text-3xl text-gray-800 font-bold dark:text-white">Calculator</span>
+            <p>A simple calculator app</p>
           </li>
           <li>
-            <span class="text-3xl text-gray-800 font-bold">Quiz App</span>
+            <span class="text-3xl text-gray-800 font-bold dark:text-white">Quiz App</span>
             <p>A simple quiz app</p>
           </li>
           <li>
-            <span class="text-3xl font-bold text-gray-800">Countdown Timer</span>
+            <span class="text-3xl font-bold text-gray-800 dark:text-white"
+              >Countdown Timer</span
+            >
             <p>Simple countdown timer</p>
           </li>
           <li>
-            <span class="text-3xl font-bold text-gray-800">Product Upcoming Page</span>
+            <span class="text-3xl font-bold text-gray-800 dark:text-white"
+              >Product Upcoming Page</span
+            >
             <p>Simple product upcoming page</p>
           </li>
         </ul>
@@ -62,8 +91,9 @@
         </p>
       </section>
     </main>
-    <footer class="text-center shadow-inner text-2xl p-5 font-mono">
+    <footer class="text-center inset-shadow-sm text-2xl p-5 font-mono mt-5 dark:shadow-slate-900 dark:inset-shadow-gray-950">
       <h3>© all rights reserved 2025</h3>
     </footer>
   </body>
 </html>
+<script src="darkMode.js"></script>
