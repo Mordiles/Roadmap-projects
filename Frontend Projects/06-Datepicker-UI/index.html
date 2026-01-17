@@ -1,12 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/ouput.css">
-  <title>Datepicker UI</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Datepicker UI</title>
+  </head>
+  <body>
+    <div class="m-5">
+      <!-- input and date button -->
+      <div class="flex mb-2">
+        <input
+          class="border h-10 p-1"
+          type="text"
+          placeholder="dd / mm / yyyy"
+        />
+        <button class="h-10 p-2 border border-l-0 cursor-pointer">
+          <i class="fa-solid fa-calendar-days text-center"></i>
+        </button>
+      </div>
+
+      <!-- Calendar Header -->
+      <div class="border w-57">
+        <div class="text-center text-xl">
+          <button class="cursor-pointer">
+            <i class="fa-solid fa-caret-left"></i>
+          </button>
+          <span class="mx-2">January 2026</span>
+          <button class="cursor-pointer">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+        <div class="grid grid-cols-7 text-sm place-items-center">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+      </div>
+      
+    </div>
+  </body>
 </html>
