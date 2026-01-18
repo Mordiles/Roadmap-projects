@@ -14,9 +14,9 @@
     <title>Accessible Form UI</title>
   </head>
   <body>
-    <div class="max-w-2/3 bg-gray-900 mx-auto p-5 m-5 flex">
+    <div class="max-w-1/2 shrink-0 bg-gray-900 mx-auto p-5 flex">
       <!-- Form -->
-      <form class="" action="">
+      <form class="basis-1/2" action="">
         <div class="text-white space-y-2">
           <div class="flex flex-col space-y-1">
             <label for="fullName" class="text-2xl">Full Name</label>
@@ -59,13 +59,44 @@
               class="border-white border rounded-xl w-xs p-1"
             />
           </div>
-          <button class="bg-white text-black w-xs p-1 mt-2">
+          <button class="bg-white text-black w-xs p-1 mt-2 rounded-2xl">
             Update Profile
           </button>
         </div>
       </form>
 
-      
+      <!-- Profile Percentage -->
+      <div class="basis-1/2 flex-col flex justify-center">
+        <div class="relative w-30 h-30 mx-auto">
+          <div
+            class="w-full h-full rounded-full"
+            style="
+              background: conic-gradient(
+                white 0% 65%,
+                rgba(255, 255, 255, 0.2) 65% 100%
+              );
+            "
+          ></div>
+
+          <div
+            class="absolute inset-1 rounded-full bg-black flex items-center justify-center"
+          >
+            <span class="text-white text-3xl">65%</span>
+          </div>
+        </div>
+
+        <span class="text-white text-2xl text-center my-4"
+          >Profile Completeness</span
+        >
+
+        <div class="bg-gray-800 text-white p-5 rounded-2xl w-fit mx-auto">
+          <p class="line-through">Create Account</p>
+          <p class="line-through">Update Roadmap Progress</p>
+          <p class="line-through">Setup Public Profile</p>
+          <p class="">Complete your first project</p>
+          <p class="">Invite your Friends</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
