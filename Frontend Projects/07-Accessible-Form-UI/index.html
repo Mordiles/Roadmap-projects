@@ -25,7 +25,9 @@
               id="fullName"
               placeholder="What should we call you?"
               class="border-white border rounded-xl w-xs p-1"
+              required
             />
+            <span></span>
           </div>
 
           <div class="flex flex-col space-y-1">
@@ -36,7 +38,9 @@
               id="email"
               class="border-white border rounded-xl w-xs p-1"
               placeholder="name@example.com"
+              required
             />
+            <span class="text-red-400 text-sm">Email is already taken</span>
           </div>
 
           <div class="flex flex-col space-y-1">
@@ -47,7 +51,9 @@
               id="enterPassword"
               class="border-white border w-xs p-1 rounded-xl"
               placeholder="Create A Password"
+              required
             />
+            <span class="text-red-400 text-sm">Password must contain atleast 8 characters</span>
           </div>
 
           <div class="flex flex-col space-y-1">
@@ -60,9 +66,12 @@
               id="confirmPassword"
               class="border-white border rounded-xl w-xs p-1"
               placeholder="Confirm Password"
+              required
             />
+            <span class="text-red-400 text-sm">Password Must Match</span>
+
           </div>
-          <button class="bg-white text-black w-xs p-1 mt-2 rounded-2xl">
+          <button class="bg-white text-black w-xs p-1 mt-2 rounded-2xl hover:bg-orange-300">
             Update Profile
           </button>
         </div>
