@@ -1,13 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="src/output.css">
-  <title>Accessible Form UI</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Accessible Form UI</title>
+  </head>
+  <body>
+    <div class="max-w-2/3 bg-gray-900 mx-auto p-5 m-5 flex">
+      <!-- Form -->
+      <form class="" action="">
+        <div class="text-white space-y-2">
+          <div class="flex flex-col space-y-1">
+            <label for="fullName" class="text-2xl">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              placeholder="What should we call you?"
+              class="border-white border rounded-xl w-xs p-1"
+            />
+          </div>
+
+          <div class="flex flex-col space-y-1">
+            <label for="email" class="text-2xl">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="border-white border rounded-xl w-xs p-1"
+            />
+          </div>
+
+          <div class="flex flex-col space-y-1">
+            <label for="enterPassword" class="text-2xl">Enter Password</label>
+            <input
+              type="password"
+              name="enterPassword"
+              id="enterPassword"
+              class="border-white border w-xs p-1 rounded-xl"
+            />
+          </div>
+
+          <div class="flex flex-col space-y-1">
+            <label for="confirmPassword" class="text-2xl"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              class="border-white border rounded-xl w-xs p-1"
+            />
+          </div>
+          <button class="bg-white text-black w-xs p-1 mt-2">
+            Update Profile
+          </button>
+        </div>
+      </form>
+
+      
+    </div>
+  </body>
 </html>
