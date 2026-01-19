@@ -14,7 +14,7 @@
     <title>Accessible Form UI</title>
   </head>
   <body>
-    <div class="max-w-1/2 shrink-0 bg-gray-900 mx-auto p-5 flex">
+    <div class="max-w-2xl shrink-0 bg-gray-900 mx-auto p-5 flex space-x-3">
       <!-- Form -->
       <form class="basis-1/2" action="">
         <div class="text-white space-y-2">
@@ -24,7 +24,7 @@
               type="text"
               id="fullName"
               placeholder="What should we call you?"
-              class="border-white border rounded-xl w-xs p-1 focus:outline-blue-300 focus:ring-1"
+              class="border-white border rounded-xl w-2xs md:w-xs p-1 focus:outline-blue-300 focus:ring-1"
               title="Enter You're Full Name"
               required
             />
@@ -37,7 +37,7 @@
               type="email"
               name="email"
               id="email"
-              class="border-white border rounded-xl w-xs p-1 focus:outline-blue-300 focus:ring-1"
+              class="border-white border rounded-xl w-2xs md:w-xs p-1 focus:outline-blue-300 focus:ring-1"
               placeholder="name@example.com"
               title="Enter You're Email"
               required
@@ -48,7 +48,7 @@
           <div class="flex flex-col space-y-1">
             <label for="enterPassword" class="text-2xl">Enter Password</label>
 
-            <span class="flex w-xs">
+            <span class="flex w-2xs md:w-xs">
               <input
                 type="password"
                 name="enterPassword"
@@ -74,7 +74,7 @@
             <label for="confirmPassword" class="text-2xl"
               >Confirm Password</label
             >
-            <span class="flex w-xs">
+            <span class="flex w-2xs md:w-xs">
               <input
                 type="password"
                 name="confirmPassword"
@@ -85,13 +85,16 @@
                 required
               />
               <button>
-                <i class="fa-solid fa-eye absolute -translate-x-7 -translate-y-2" style="color: #ffffff"></i>
+                <i
+                  class="fa-solid fa-eye absolute -translate-x-7 -translate-y-2"
+                  style="color: #ffffff"
+                ></i>
               </button>
             </span>
             <span class="text-red-400 text-sm">Password Must Match</span>
           </div>
           <button
-            class="bg-white text-black w-xs p-1 mt-2 rounded-2xl hover:bg-orange-300 hover:font-bold"
+            class="bg-white text-black w-2xs md:w-xs p-1 mt-2 rounded-2xl hover:bg-orange-300 hover:font-bold"
           >
             Update Profile
           </button>
@@ -100,7 +103,7 @@
 
       <!-- Profile Percentage -->
       <div class="basis-1/2 flex-col flex justify-center">
-        <div class="relative w-30 h-30 mx-auto">
+        <div class="relative w-23 h-23 sm:w-30 sm:h-30 mx-auto">
           <div
             class="w-full h-full rounded-full"
             style="
@@ -114,20 +117,38 @@
           <div
             class="absolute inset-1 rounded-full bg-black flex items-center justify-center"
           >
-            <span class="text-white text-3xl">65%</span>
+            <span class="text-white text-2xl sm:text-3xl">65%</span>
           </div>
         </div>
 
-        <span class="text-white text-2xl text-center my-4"
+        <span class="text-white text-xl text-center my-4"
           >Profile Completeness</span
         >
 
-        <div class="bg-gray-800 text-white p-5 rounded-2xl w-fit mx-auto">
-          <p class="line-through">Create Account</p>
-          <p class="line-through">Update Roadmap Progress</p>
-          <p class="line-through">Setup Public Profile</p>
-          <p class="">Complete your first project</p>
-          <p class="">Invite your Friends</p>
+        <div
+          class="bg-gray-800 text-sm sm:text-xl text-white p-5 rounded-2xl w-fit space-y-1 mx-auto"
+        >
+          <ul class="space-y-2">
+            <li>
+              <p class="line-through">Create Account</p>
+            </li>
+
+            <li>
+              <p class="line-through">Update Roadmap Progress</p>
+            </li>
+
+            <li>
+              <p class="line-through">Setup Public Profile</p>
+            </li>
+
+            <li>
+              <p class="">Complete your first project</p>
+            </li>
+
+            <li>
+              <p class="">Invite your Friends</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
