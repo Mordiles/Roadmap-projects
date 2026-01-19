@@ -47,15 +47,24 @@
 
           <div class="flex flex-col space-y-1">
             <label for="enterPassword" class="text-2xl">Enter Password</label>
-            <input
-              type="password"
-              name="enterPassword"
-              id="enterPassword"
-              class="border-white border w-xs p-1 rounded-xl focus:outline-blue-300 focus:ring-1"
-              placeholder="Create A Password"
-              title="Password Must Contain Atleast 8 Characters"
-              required
-            />
+
+            <span class="flex w-xs">
+              <input
+                type="password"
+                name="enterPassword"
+                id="enterPassword"
+                class="border-white border w-full p-1 pr-10 rounded-xl focus:outline-blue-300 focus:ring-1"
+                placeholder="Create A Password"
+                title="Password Must Contain Atleast 8 Characters"
+                required
+              />
+              <button>
+                <i
+                  class="fa-solid fa-eye absolute -translate-x-7 -translate-y-2"
+                  style="color: #ffffff"
+                ></i>
+              </button>
+            </span>
             <span class="text-red-400 text-sm"
               >Password must contain atleast 8 characters</span
             >
@@ -65,15 +74,20 @@
             <label for="confirmPassword" class="text-2xl"
               >Confirm Password</label
             >
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              class="border-white border rounded-xl w-xs p-1 focus:outline-blue-300 focus:ring-1"
-              placeholder="Confirm Password"
-              title="Enter You're Password Again"
-              required
-            />
+            <span class="flex w-xs">
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                class="border-white border rounded-xl w-full pr-10 p-1 focus:outline-blue-300 focus:ring-1"
+                placeholder="Confirm Password"
+                title="Enter You're Password Again"
+                required
+              />
+              <button>
+                <i class="fa-solid fa-eye absolute -translate-x-7 -translate-y-2" style="color: #ffffff"></i>
+              </button>
+            </span>
             <span class="text-red-400 text-sm">Password Must Match</span>
           </div>
           <button
