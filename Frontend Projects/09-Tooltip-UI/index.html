@@ -1,12 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/output.css">
-  <title>Tooltip UI</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Tooltip UI</title>
+  </head>
+  <body class="flex justify-center items-center h-screen p-5">
+    <nav>
+      <ul class="flex gap-2">
+        <li class="relative group">
+          <a href="#" class="relative z-10">Home</a>
+          <div
+            class="absolute -translate-y-7 translate-x-11 opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-100 group-hover:transition group-hover:duration-1000 group-hover:ease-in-out group-hover:-translate-y-5"
+          >
+            <span
+              class="absolute -translate-y-13 -translate-x-22 bg-gray-950 text-white text-center w-36 p-2 rounded-3xl "
+              >Go to homepage</span
+            >
+            <span
+              class="absolute border-gray-950 border-t-15 border-l-15 border-r-15 border-l-transparent border-r-transparent -translate-y-4 -translate-x-9"
+            ></span>
+          </div>
+        </li>
+        <span>/</span>
+        <li class="relative group">
+          <a href="#" class="relative z-10">Projects</a>
+          <div
+            class="absolute -translate-y-3 translate-x-11 opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-100 group-hover:transition group-hover:duration-1000 group-hover:ease-out group-hover:-translate-y-5"
+          >
+            <span
+              class="absolute -translate-y-13 -translate-x-21 bg-gray-950 text-white text-center w-36 p-2 rounded-3xl "
+              >View My Projects</span
+            >
+            <span
+              class="absolute border-gray-950 border-t-15 border-l-15 border-r-15 border-l-transparent border-r-transparent -translate-y-4 -translate-x-8"
+            ></span>
+          </div>
+        </li>
+        <span>/</span>
+        <li class="relative group">
+          <a href="#" class="relative z-10">Blog</a>
+          <div
+            class="absolute -translate-y-3 translate-x-11 opacity-0 scale-55 group-hover:scale-100 group-hover:opacity-100 group-hover:transition group-hover:duration-1000 group-hover:ease-out"
+          >
+            <span
+              class="absolute -translate-y-16 -translate-x-25 bg-gray-950 text-white text-center w-39 p-2 rounded-3xl"
+              >Read My Blog Posts</span
+            >
+            <span
+              class="absolute border-gray-950 border-t-15 border-l-15 border-r-15 border-l-transparent border-r-transparent -translate-y-7 -translate-x-10"
+            ></span>
+          </div>
+        </li>
+        <span>/</span>
+        <li class="group relative">
+          <a href="#">About</a>
+          <div
+            class="absolute -translate-y-3 translate-x-11 opacity-0 scale-20 group-hover:scale-100 group-hover:opacity-100 group-hover:transition group-hover:duration-1000 group-hover:ease-out group-hover:-translate-y-5"
+          >
+            <span
+              class="absolute -translate-y-13 -translate-x-28 bg-gray-950 text-white text-center w-43 p-2 rounded-3xl"
+              >Learn More About Me</span
+            >
+            <span
+              class="absolute border-gray-950 border-t-15 border-l-15 border-r-15 border-l-transparent border-r-transparent -translate-y-4 -translate-x-10"
+            ></span>
+          </div>
+        </li>
+        <span>/</span>
+        <li class="relative group">
+          <a href="" class="relative z-10">Contacts</a>
+          <div
+            class="absolute -translate-y-3 translate-x-11 opacity-0 scale-70 group-hover:scale-100 group-hover:opacity-100 group-hover:transition group-hover:duration-1000 group-hover:ease-out group-hover:-translate-y-5"
+          >
+            <span
+              class="absolute -translate-y-13 -translate-x-18 bg-gray-950 text-white text-center w-30 p-2 rounded-3xl"
+              >Get in touch</span
+            >
+            <span
+              class="absolute border-gray-950 border-t-15 border-l-15 border-r-15 border-l-transparent border-r-transparent -translate-y-4 -translate-x-7"
+            ></span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </body>
 </html>
