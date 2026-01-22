@@ -1,12 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="output.css">
-  <title>Tabs</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Tabs</title>
+  </head>
+  <body class="p-6 flex justify-center items-center">
+    <div class="h-screen w-3xl shadow-md p-4">
+      <nav class="mb-5">
+        <ul class="flex gap-3">
+          <li id="js-tab1" class="hover:bg-gray-100 p-1 tab-active">
+            <button id="btn-tab1" class="cursor-pointer">
+              First Tab
+            </button>
+          </li>
+          <li id="js-tab2" class="p-1 hover:bg-gray-100">
+            <button id="btn-tab2" class="cursor-pointer">Second Tab</button>
+          </li>
+          <li id="js-tab3" class="p-1 hover:bg-gray-100">
+            <button id="btn-tab3" class="cursor-pointer">Third Tab</button>
+          </li>
+          <li id="js-tab4" class="p-1 hover:bg-gray-100">
+            <button id="btn-tab4" class="cursor-pointer">Fourth Tab</button>
+          </li>
+        </ul>
+      </nav>
+      <div id="js-tabs">
+        <section class="my-5 bg-gray-100 text-black p-5">
+          <h2 class="text-3xl font-bold my-1">Tab 1</h2>
+          <p>This is the content of tab 1</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore
+            nulla autem expedita hic recusandae molestias debitis alias ducimus
+            inventore, nam enim provident, laudantium aperiam praesentium atque
+            consequatur quasi magni?
+          </p>
+        </section>
+
+        <section class="my-5 bg-gray-100 text-black p-5">
+          <h2 class="text-3xl font-bold my-1">Tab 2</h2>
+          <p>This is the content of tab 2</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore
+            nulla autem expedita hic recusandae molestias debitis alias ducimus
+            inventore, nam enim provident, laudantium aperiam praesentium atque
+            consequatur quasi magni?
+          </p>
+        </section>
+
+        <section class="my-5 bg-gray-100 text-black p-5">
+          <h2 class="text-3xl font-bold my-1">Tab 3</h2>
+          <p>This is the content of tab 3</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore
+            nulla autem expedita hic recusandae molestias debitis alias ducimus
+            inventore, nam enim provident, laudantium aperiam praesentium atque
+            consequatur quasi magni?
+          </p>
+        </section>
+
+        <section class="my-5 bg-gray-100 text-black p-5">
+          <h2 class="text-3xl font-bold my-1">Tab 4</h2>
+          <p>This is the content of tab 4</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore
+            nulla autem expedita hic recusandae molestias debitis alias ducimus
+            inventore, nam enim provident, laudantium aperiam praesentium atque
+            consequatur quasi magni?
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>

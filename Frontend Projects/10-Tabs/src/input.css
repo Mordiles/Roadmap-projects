@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer components{
+  .tab-active{
+    @apply bg-gray-100 border-b-2 border-black
+  }
+}
