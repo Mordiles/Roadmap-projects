@@ -10,24 +10,24 @@
     <div class="h-screen w-3xl shadow-md p-4">
       <nav class="mb-5">
         <ul class="flex gap-3">
-          <li id="js-tab1" class="hover:bg-gray-100 p-1 tab-active">
-            <button id="btn-tab1" class="cursor-pointer">
+          <li data-tab="1" class="hover:bg-gray-100 p-1 tab-active">
+            <button class="cursor-pointer">
               First Tab
             </button>
           </li>
-          <li id="js-tab2" class="p-1 hover:bg-gray-100">
-            <button id="btn-tab2" class="cursor-pointer">Second Tab</button>
+          <li data-tab="2" class="p-1 hover:bg-gray-100">
+            <button class="cursor-pointer">Second Tab</button>
           </li>
-          <li id="js-tab3" class="p-1 hover:bg-gray-100">
-            <button id="btn-tab3" class="cursor-pointer">Third Tab</button>
+          <li data-tab="3" class="p-1 hover:bg-gray-100">
+            <button class="cursor-pointer">Third Tab</button>
           </li>
-          <li id="js-tab4" class="p-1 hover:bg-gray-100">
-            <button id="btn-tab4" class="cursor-pointer">Fourth Tab</button>
+          <li data-tab="4" class="p-1 hover:bg-gray-100">
+            <button class="cursor-pointer">Fourth Tab</button>
           </li>
         </ul>
       </nav>
       <div id="js-tabs">
-        <section class="my-5 bg-gray-100 text-black p-5">
+        <section data-section="1" class="my-5 bg-gray-100 text-black p-5 space-y-3">
           <h2 class="text-3xl font-bold my-1">Tab 1</h2>
           <p>This is the content of tab 1</p>
           <p>
@@ -36,9 +36,11 @@
             inventore, nam enim provident, laudantium aperiam praesentium atque
             consequatur quasi magni?
           </p>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptates eum vero commodi maiores libero est consequuntur quidem. Sequi aliquam iusto perspiciatis nostrum, deserunt rem neque nihil ut optio quasi minima impedit eum incidunt numquam nulla consectetur veniam recusandae.</p>
         </section>
 
-        <section class="my-5 bg-gray-100 text-black p-5">
+        <section data-section="2" class="my-5 bg-gray-100 text-black p-5 hidden space-y-3">
           <h2 class="text-3xl font-bold my-1">Tab 2</h2>
           <p>This is the content of tab 2</p>
           <p>
@@ -49,7 +51,7 @@
           </p>
         </section>
 
-        <section class="my-5 bg-gray-100 text-black p-5">
+        <section data-section="3" class="my-5 bg-gray-100 text-black p-5 hidden space-y-3">
           <h2 class="text-3xl font-bold my-1">Tab 3</h2>
           <p>This is the content of tab 3</p>
           <p>
@@ -58,9 +60,11 @@
             inventore, nam enim provident, laudantium aperiam praesentium atque
             consequatur quasi magni?
           </p>
+
+          <p>Lorem, ipsum.</p>
         </section>
 
-        <section class="my-5 bg-gray-100 text-black p-5">
+        <section data-section="4" class="my-5 bg-gray-100 text-black p-5 hidden space-y-3">
           <h2 class="text-3xl font-bold my-1">Tab 4</h2>
           <p>This is the content of tab 4</p>
           <p>
@@ -69,6 +73,8 @@
             inventore, nam enim provident, laudantium aperiam praesentium atque
             consequatur quasi magni?
           </p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit odio, a labore sint quae error ad ab facilis harum eum tempora nisi at. Vitae, accusantium nisi, error perspiciatis porro corporis in quidem qui fugit aut maiores facere. Necessitatibus, ratione, iste quia eveniet labore alias consectetur velit reprehenderit rem aspernatur beatae ut quasi laboriosam sunt quo voluptas earum? Nemo vel voluptatum, et qui ut minima consectetur facere nesciunt quia accusamus repudiandae aperiam rerum perspiciatis, consequatur sint quam porro, id maxime officia obcaecati blanditiis reiciendis recusandae cupiditate! Necessitatibus ratione dolorum qui quidem dolore repudiandae fugiat perspiciatis maxime, dicta nisi, voluptatem hic.</p>
         </section>
       </div>
     </div>
