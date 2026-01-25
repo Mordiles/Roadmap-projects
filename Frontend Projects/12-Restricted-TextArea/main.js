@@ -2,7 +2,7 @@ const textArea = document.getElementById("js-textarea");
 const textAreaLimit = document.getElementById("js-text-limit");
 const textContainer = document.getElementById("js-text-container");
 
-const textLimit = 50;
+const textLimit = 250;
 var textCurrently = textArea.value.length;
 
 textAreaLimit.textContent = `${textCurrently} / ${textLimit}`;
