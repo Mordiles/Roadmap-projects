@@ -5,21 +5,15 @@ const textContainer = document.getElementById("js-text-container");
 const textLimit = 50;
 var textCurrently = textArea.value.length;
 
-textAreaLimit.innerHTML = `${textCurrently} / ${textLimit}`;
+textAreaLimit.textContent = `${textCurrently} / ${textLimit}`;
 
 textArea.addEventListener("input", () => {
   if (textArea.value.length >= textLimit) {
     textArea.value = textArea.value.slice(0, textLimit);
-    textAreaLimit.innerHTML = `${textArea.value.length} / ${textLimit}`;
-    if (!textContainer.classList.contains("restricted-textarea")) {
-      textContainer.classList.add("restricted-textarea");
-    }
-    return;
   }
 
-  if (textContainer.classList.contains("restricted-textarea")) {
-    textContainer.classList.remove("restricted-textarea");
-  }
+  const len = textArea.value.length;
 
-  textAreaLimit.innerHTML = `${textArea.value.length} / ${textLimit}`;
+  textContainer.classList.toggle("restricted-textarea", len >= textLimit);
+  textAreaLimit.textContent = `${textArea.value.length} / ${textLimit}`;
 });
