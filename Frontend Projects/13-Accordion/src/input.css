@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@layer utilities{
+  .closed{
+    @apply max-h-0 opacity-0 overflow-hidden
+  }
+  .open{
+    @apply opacity-100 p-3
+  }
+}

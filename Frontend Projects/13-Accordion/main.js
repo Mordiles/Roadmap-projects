@@ -1,18 +1,33 @@
-const infoButtons = document.querySelectorAll("[data-btninfo]");
+const header = document.querySelectorAll("[data-btninfo]");
 const info = document.querySelectorAll("[data-info]");
+const icons = document.querySelectorAll("[data-btninfo] i");
 
-infoButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const dataBtn = button.dataset.btninfo;
+header.forEach((h) => {
+  h.addEventListener("click", () => {
+    const dataBtn = h.dataset.btninfo;
     const infoTarget = document.querySelector(`[data-info='${dataBtn}']`);
+    const icon = h.querySelector("i");
+    const isOpen = infoTarget.classList.contains("open");
 
-    infoTarget.classList.toggle("hidden");
-    
     info.forEach((info) => {
       if (info !== infoTarget) {
-        info.classList.add("hidden");
+        info.classList.add("closed");
+        info.classList.remove("open");
       }
     });
 
+    icons.forEach((i) => {
+      i.classList.remove("rotate-45");
+    });
+
+    if (!isOpen) {
+      infoTarget.classList.add("open");
+      infoTarget.classList.remove("closed");
+      icon.classList.add("rotate-45");
+    } else {
+      infoTarget.classList.remove("open");
+      infoTarget.classList.add("closed");
+      icon.classList.remove("rotate-45");
+    }
   });
 });
