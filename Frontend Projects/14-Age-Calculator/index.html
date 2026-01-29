@@ -1,20 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/output.css">
-  <title>Age Calculator</title>
-</head>
-<body>
-  <div class="flex flex-col justify-center items-center my-3 space-y-2 mx-auto h-screen">
-    <h1 class="text-3xl font-bold">Age Calculator</h1>
-    <div >
-      <p>Enter your birth date:</p>
-      <input class="border w-52 p-1" id="js-date-picker">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/js-datepicker/dist/datepicker.min.css"
+    />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <div
+      class="flex flex-col justify-center items-center my-3 space-y-2 mx-auto h-screen"
+    >
+      <h1 class="text-3xl font-bold">Age Calculator</h1>
+      <div>
+        <p>Enter your birth date:</p>
+        <input class="border w-52 p-1" id="js-date-picker" readonly />
+      </div>
+      <button id="btn-calculate-age" class="border w-52 p-1">Calculate</button>
+      <span id="js-age-result">Calculated age:</span>
     </div>
-    <button id="btn-calculate-age" class="border w-52 p-1">Calculate</button>
-    <span id="js-age-result">Calculated age:</span>
-  </div>
-</body>
+
+    <!-- js-datepicker -->
+    <script src="https://unpkg.com/js-datepicker"></script>
+
+    <!-- luxon -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js"
+      integrity="sha256-UWxf6lyCvfH7XEcrmq/cqc2m3IBrLBLOnWLC4Pw0gQQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
 </html>
