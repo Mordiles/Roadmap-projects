@@ -1,12 +1,27 @@
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class DatabaseConnection {
-  private static final String URL = "jdbc:mysql://localhost:3306/java_task_tracker";
+  private static String URL;
+  private static String USER;
+  private static String PASSWORD;
 
-  private static final String USER = "";
-  private static final String PASSWORD = "";
+  static {
+    try {
+      Properties props = new Properties();
+      props.load(new FileInputStream("Backend Projects\\Java Backend Projects\\TaskTracker\\config.properties"));
+      URL = props.getProperty("db.url");
+      USER = props.getProperty("db.user");
+      PASSWORD = props.getProperty("db.password");
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 
   public static Connection connect() throws SQLException {
     return DriverManager.getConnection(
@@ -15,7 +30,7 @@ public class DatabaseConnection {
         PASSWORD);
   }
 
-  /* public static void main(String[] args) {
+  public static void main(String[] args) {
 
     try {
       Connection conn = DatabaseConnection.connect();
@@ -30,5 +45,6 @@ public class DatabaseConnection {
 
       e.printStackTrace();
     }
-  } */
+  }
+
 }
