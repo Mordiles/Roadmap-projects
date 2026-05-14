@@ -1,0 +1,7 @@
+#Everything
+.vscode/
+
+# Backend Projects
+
+#Java Backend Projects
+/Backend Projects/Java Backend Projects/TaskTracker/src/DatabaseConnection.java
