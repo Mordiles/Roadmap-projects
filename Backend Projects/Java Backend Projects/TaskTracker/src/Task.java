@@ -1,11 +1,14 @@
+
+import java.time.LocalDateTime;
+
 public class Task {
   private int task_id;
   private String description;
   private Status status;
-  private String createdAt;
-  private String updatedAt;
+  private LocalDateTime createdAt;
+  private LocalDateTime updatedAt;
   
-  public Task(int id, String desc, Status status, String createdAt,String updatedAt){
+  public Task(int id, String desc, Status status, LocalDateTime createdAt,LocalDateTime updatedAt){
     this.task_id = id;
     this.description = desc;
     this.status = status;
@@ -25,10 +28,10 @@ public class Task {
     return status;
   }
 
-  public String getTaskCreatedAt(){
+  public LocalDateTime getTaskCreatedAt(){
     return createdAt;
   }
-  public String getTaskUpdatedAt(){
+  public LocalDateTime getTaskUpdatedAt(){
     return updatedAt;
   }
 
