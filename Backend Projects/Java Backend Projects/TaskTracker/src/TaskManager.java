@@ -79,10 +79,64 @@ public class TaskManager {
         System.out.println("Task Not Found!");
       }
     } catch (SQLException e) {
-      System.out.println("Error Updating Task:");
+      System.out.println("Error Deleting Task:");
       e.printStackTrace();
     }
   }
+
+  public void markInProgress(int id) {
+    String sql = """
+        UPDATE task
+        SET status = ?
+        WHERE task_id = ?
+        """;
+
+    try (
+        Connection conn = DatabaseConnection.connect();
+        PreparedStatement ps = conn.prepareStatement(sql);) {
+      ps.setString(1, Status.IN_PROGRESS.name());
+      ps.setInt(2, id);
+
+      int affected = ps.executeUpdate();
+
+      if (affected > 0) {
+
+        System.out.println("Task Marked in Progress!");
+      } else {
+        System.out.println("Task Not Found!");
+      }
+    } catch (SQLException e) {
+      System.out.println("Error Marking In Progress a Task");
+    }
+  }
+
+  public void markDone(int id) {
+    String sql = """
+        UPDATE task
+        SET status = ?
+        WHERE task_id = ?
+        """;
+
+    try (
+        Connection conn = DatabaseConnection.connect();
+        PreparedStatement ps = conn.prepareStatement(sql);) {
+      ps.setString(1, Status.DONE.name());
+      ps.setInt(2, id);
+
+      int affected = ps.executeUpdate();
+
+      if (affected > 0) {
+
+        System.out.println("Task Marked as Done!");
+      } else {
+        System.out.println("Task Not Found!");
+      }
+    } catch (SQLException e) {
+      System.out.println("Error Marking Task as Done");
+    }
+  }
+
+  
 
   public static void main(String[] args) {
 
