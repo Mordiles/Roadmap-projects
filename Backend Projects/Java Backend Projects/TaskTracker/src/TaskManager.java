@@ -1,8 +1,10 @@
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class TaskManager {
   public void addTask(String description) {
@@ -136,9 +138,89 @@ public class TaskManager {
     }
   }
 
-  
+  public void listAllTask() {
+    String sql = """
+        SELECT * FROM task
+        """;
 
-  public static void main(String[] args) {
+    try (
+        Connection conn = DatabaseConnection.connect();
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();) {
+      while (rs.next()) {
+        int id = rs.getInt("task_id");
+        String desc = rs.getString("description");
+        String status = rs.getString("status");
+        LocalDateTime created_at = rs.getObject("created_at", LocalDateTime.class);
+        LocalDateTime updated_at = rs.getObject("updated_at", LocalDateTime.class);
 
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
+        String createdTime = created_at.format(timeFormatter);
+        String updatedTime = updated_at.format(timeFormatter);
+
+        String text = String.format("""
+            ID: %d
+            Description: %s
+            Status: %s
+            Created: %s
+            Updated: %s
+            """, id, desc, status, createdTime, updatedTime);
+
+        System.out.println(text);
+        System.out.println("-".repeat(10));
+      }
+    } catch (SQLException e) {
+      System.out.println("Error showing task:");
+      e.getMessage();
+    }
+  }
+
+  public void listByStatus(Status status) {
+    String sql = """
+        SELECT * FROM task
+        WHERE status = ?
+        """;
+
+    try (
+        Connection conn = DatabaseConnection.connect();
+        PreparedStatement ps = conn.prepareStatement(sql)) {
+      ps.setString(1, status.name());
+      try (
+          ResultSet rs = ps.executeQuery();) {
+        printTasks(rs);
+      }
+    } catch (SQLException e) {
+      System.out.println("Error showing task:");
+      e.printStackTrace();
+    }
+  }
+
+  private void printTasks(ResultSet rs) throws SQLException {
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd MMM yyyy");
+    boolean found = false;
+    while (rs.next()) {
+      found = true;
+      Task task = new Task(
+          rs.getInt("task_id"),
+          rs.getString("description"),
+          Status.valueOf(rs.getString("status")),
+          rs.getObject("created_at", LocalDateTime.class),
+          rs.getObject("updated_at", LocalDateTime.class));
+
+      System.out.printf("""
+          ID: %s
+          Description: %s
+          Status: %s
+          Created At: %s
+          Updated At: %s
+          %n""", task.getTaskId(),
+          task.getTaskDesc(),
+          task.getTaskStatus(),
+          task.getTaskCreatedAt().format(format),
+          task.getTaskUpdatedAt().format(format));
+      System.out.println("-".repeat(10));
+    }
+    if (!found)
+      System.out.println("Task not found.");
   }
 }

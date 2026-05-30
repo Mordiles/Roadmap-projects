@@ -5,6 +5,8 @@ public class App {
         Scanner input = new Scanner(System.in);
         int timerUI = 0;
 
+        TaskManager manager = new TaskManager();
+
         while (true) {
             Thread.sleep(timerUI);
 
@@ -26,11 +28,14 @@ public class App {
 
                 switch (taskChoice) {
                     case 1:
-                        System.out.println("Case 1");
+                        System.out.println("=".repeat(4)+" New Task "+"-".repeat(4));
+                        System.out.println("Enter New Task Description:");
+                        String desc = input.nextLine();
+                        manager.addTask(desc);
                         break;
                     case 2:
-                        System.out.println("Case 2");
-
+                        System.out.println("Enter Task ID: ");
+                        int updateID = input.nextInt();
                         break;
                     case 3:
                         System.out.println("Case 3");
